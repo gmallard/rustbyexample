@@ -1,8 +1,5 @@
-fn main() {
-    let number = 13;
-    // TODO ^ Try different values for `number`
-
-    println!("Tell me about {}", number);
+fn try_match(number: i32) {
+    println!("\nTell me about {}", number);
     match number {
         // Match a single value
         1 => println!("One!"),
@@ -13,6 +10,14 @@ fn main() {
         // Handle the rest of cases
         _ => println!("Ain't special"),
     }
+}
+
+fn main() {
+
+    try_match(13);
+    try_match(3);
+    try_match(1);
+    try_match(42);
 
     let boolean = true;
     // Match is an expression too
