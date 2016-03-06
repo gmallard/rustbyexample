@@ -13,6 +13,12 @@ fn reverse(pair: (i32, bool)) -> (bool, i32) {
 #[derive(Debug)]
 struct Matrix(f32, f32, f32, f32);
 
+// Transpose elements of a Matrix
+fn transpose(mi: Matrix) -> Matrix {
+    // 
+    Matrix(mi.0, mi.2, mi.1, mi.3)
+}
+
 // Implement `Display` for `Matrix`.
 impl fmt::Display for Matrix {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
@@ -57,6 +63,11 @@ fn main() {
     let matrix = Matrix(1.1, 1.2, 2.1, 2.2);
     println!("{:?}", matrix);
     println!("Display:\n{}", matrix);
+
+    println!("{}", "\n");
+
+    println!("Matrix:\n{}", matrix);
+    println!("Transpose:\n{}", transpose(matrix));
 
 }
 
