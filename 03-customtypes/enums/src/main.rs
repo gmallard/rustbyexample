@@ -42,10 +42,15 @@ fn main() {
     let john   = Person::Fat;
     let larry  = Person::Skinny;
 
+    println!("{}", "\nInspect person:");
     inspect(person);
+    println!("{}", "\nInspect danny:");
     inspect(danny);
+    println!("{}", "\nInspect dave:");
     inspect(dave);
+    println!("{}", "\nInspect john:");
     inspect(john);
+    println!("{}", "\nInspect larry:");
     inspect(larry);
 }
 
