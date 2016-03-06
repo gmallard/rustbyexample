@@ -1,3 +1,4 @@
+
 // This is a simple macro named `say_hello`.
 macro_rules! say_hello {
     // `()` indicates that the macro takes no argument.
@@ -55,7 +56,13 @@ fn main() {
     // FIXME ^ Comment out this line.
 
     // local macro - for fun
-    say_hello!()
+    say_hello!();
 
+    //
+    let n = 22.0;
+    let d = 7.0;
+    let r = n / d;
+    let rf = format!("{:.*}", 3, r);
+    println!("Pi is roughly {}", rf);
 }
 
