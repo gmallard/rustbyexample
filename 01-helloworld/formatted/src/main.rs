@@ -1,3 +1,12 @@
+// This is a simple macro named `say_hello`.
+macro_rules! say_hello {
+    // `()` indicates that the macro takes no argument.
+    () => (
+        // The macro will expand into the contents of this block.
+        println!("Hello from a macro!");
+    )
+}
+
 fn main() {
     // In general, the `{}` will be automatically replaced with any
     // arguments. These will be stringified.
@@ -45,7 +54,8 @@ fn main() {
     //* println!("This struct `{}` won't print...", Structure(3));
     // FIXME ^ Comment out this line.
 
-    //
-    println!("Pi is roughly {:?}", Structure(22 / 7)); // no work
+    // local macro - for fun
+    say_hello!()
+
 }
 
