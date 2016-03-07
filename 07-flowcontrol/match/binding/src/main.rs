@@ -4,14 +4,14 @@ variable without re-binding. match provides the @ sigil for binding values
 to names:
 */
 // A function `age` which returns a `u32`.
-fn age() -> u32 {
-    15
+fn age(r: u32) -> u32 {
+    r
 }
 
-fn main() {
-    println!("Tell me type of person you are");
+fn try_match(d: u32) {
+    println!("\nTell me type of person you are, at {}", d);
 
-    match age() {
+    match age(d) {
         0             => println!("I'm not born yet I guess"),
         // Could `match` 1 ... 12 directly but then what age
         // would the child be? Instead, bind to `n` for the
@@ -21,5 +21,13 @@ fn main() {
         // Nothing bound. Return the result.
         n             => println!("I'm an old person of age {:?}", n),
     }
+}
+
+fn main() {
+
+  try_match(15);
+  try_match(0);
+  try_match(7);
+  try_match(101);
 }
 
