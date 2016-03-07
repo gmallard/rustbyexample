@@ -30,18 +30,21 @@ impl Inches {
 }
 
 // `Seconds`, a tuple struct no additional attributes
+#[derive(Debug)]
+#[derive(PartialEq)]
 struct Seconds(i32);
 
 fn main() {
     let _one_second = Seconds(1);
 
     // Error: `Seconds` can't be printed; it doesn't implement the `Debug` trait
-    //println!("One second looks like: {:?}", _one_second);
-    // TODO ^ Try uncommenting this line
+    println!("One second looks like: {:?}", _one_second);
+    // TODO ^ Try uncommenting this line : DONE, compile failure w/o Debug
 
     // Error: `Seconds` can't be compared; it doesn't implement the `PartialEq` trait
-    //let _this_is_true = (_one_second == _one_second);
-    // TODO ^ Try uncommenting this line
+    let _this_is_true = _one_second == _one_second;
+    println!("Is equal? {}", _this_is_true);
+    // TODO ^ Try uncommenting this line : DONE, compile failure w/o PartialEq
 
     let foot = Inches(12);
 
