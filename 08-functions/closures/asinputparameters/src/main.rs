@@ -24,7 +24,8 @@ restrictive manner possible on a variable-by-variable basis:
 fn apply<F>(f: F) where
     // The closure takes no input and returns nothing.
     F: FnOnce() {
-    // ^ TODO: Try changing this to `Fn` or `FnMut`.
+    // ^ TODO: Try changing this to `Fn` or `FnMut`. : DONE, compile
+    // errors.  Not intuitive wording!
 
     f()
 }
