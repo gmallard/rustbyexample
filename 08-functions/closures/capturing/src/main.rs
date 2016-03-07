@@ -46,8 +46,9 @@ fn main() {
     inc();
     inc();
 
-    //let reborrow = &mut count;
-    // ^ TODO: try uncommenting this line.
+    // let reborrow = &mut count;
+    // ^ TODO: try uncommenting this line. : DONE, compile error (no borrow 
+    // twice)
 
     // A non-copy type.
     let movable = Box::new(3);
@@ -63,7 +64,8 @@ fn main() {
 
     // `consume` consumes the variable so this can only be called once.
     consume();
-    //consume();
-    // ^ TODO: Try uncommenting this line.
+    // consume();
+    // ^ TODO: Try uncommenting this line. : DONE, compile error, use of
+    // removed value.
 }
 
