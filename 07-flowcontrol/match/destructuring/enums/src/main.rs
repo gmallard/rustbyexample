@@ -20,10 +20,7 @@ enum Color {
     CMYK(u32, u32, u32, u32),
 }
 
-fn main() {
-    let color = Color::RGB(122, 17, 40);
-    // TODO ^ Try different variants for `color`
-
+fn try_color(color: Color) {
     println!("What color is it?");
     // An `enum` can be destructured using a `match`.
     match color {
@@ -43,5 +40,15 @@ fn main() {
                 c, m, y, k),
         // Don't need another arm because all variants have been examined
     }
+}
+
+fn main() {
+
+    try_color(Color::RGB(122, 17, 40));
+
+    try_color(Color::Red);
+    try_color(Color::Green);
+    try_color(Color::Blue);
+
 }
 
