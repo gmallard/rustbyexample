@@ -96,8 +96,8 @@ fn main() {
 
     // Error! `rectangle` is immutable, but this method requires a mutable
     // object
-    //rectangle.translate(1.0, 0.0);
-    // TODO ^ Try uncommenting this line
+    // rectangle.translate(1.0, 0.0);
+    // TODO ^ Try uncommenting this line : DONE, compile error (borrow)
 
     // Okay! Mutable objects can call mutable methods
     square.translate(1.0, 1.0);
@@ -107,7 +107,7 @@ fn main() {
     pair.destroy();
 
     // Error! Previous `destroy` call "consumed" `pair`
-    //pair.destroy();
-    // TODO ^ Try uncommenting this line
+    // pair.destroy();
+    // TODO ^ Try uncommenting this line : DONE, compile error
 }
 
