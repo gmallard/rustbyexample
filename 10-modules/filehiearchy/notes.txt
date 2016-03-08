@@ -1,0 +1,19 @@
+To run this example:
+
+cd src # this directory
+
+then:
+
+$ rustc main.rs && ./main
+called `my::function()`
+called `function()`
+called `my::indirect_access()`, that
+> called `my::private_function()`
+called `my::nested::function()`
+
+Alternatively:
+
+cd to fileharchy directory:
+
+cargo run # also works
+
