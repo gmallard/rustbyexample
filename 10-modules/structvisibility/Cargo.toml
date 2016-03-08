@@ -1,0 +1,6 @@
+[package]
+name = "structvisibility"
+version = "0.1.0"
+authors = ["gmallard <allard.guy.m@gmail.com>"]
+
+[dependencies]
