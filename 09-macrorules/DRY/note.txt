@@ -1,0 +1,11 @@
+To run this example:
+
+cd src
+rustc --test main.rs && ./main
+// Output:
+running 3 tests
+test test::mul_assign ... ok
+test test::add_assign ... ok
+test test::sub_assign ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured
