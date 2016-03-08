@@ -1,0 +1,5 @@
+
+To use cargo to pass flags to rustc, use rustc options after --, e.g.:
+
+cargo rustc -- --cfg some_option
+

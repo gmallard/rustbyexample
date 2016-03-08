@@ -1,0 +1,22 @@
+
+An attribute is metadata applied to some module, crate or item. This metadata 
+can be used to/for:
+
+1) conditional compilation of code
+2) set crate name, version and type (binary or library)
+3) disable lints (warnings)
+4) enable compiler features (macros, glob imports, etc.)
+5) link to a foreign library
+6) mark functions as unit tests
+7) mark functions that will be part of a benchmark
+
+When attributes apply to a whole crate, their syntax is #![crate_attribute], 
+and when they apply to a module or item, the syntax is #[item_attribute] 
+(notice the missing bang !).
+
+Attributes can take arguments with different syntaxes:
+
+1) #[attribute = "value"]
+2) #[attribute(key = "value")]
+3) #[attribute(value)]
+
