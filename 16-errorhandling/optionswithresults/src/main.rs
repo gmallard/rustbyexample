@@ -23,10 +23,16 @@ fn main() {
     let empty = vec![];
     let strings = vec!["tofu", "93", "18"];
 
+    println!("{}", "start");
     println!("The first doubled is {}", double_first(numbers));
+    println!("{}", "at A");
     println!("The first doubled is {}", double_first(empty));
-    // ^ Comment out this line to see the second error.
+    println!("{}", "at B");
+    // ^ Comment out this line to see the second error. -> Compile error,
+    // *not* runtime (??)
+    println!("{}", "at C");
     println!("The first doubled is {}", double_first(strings));
+    println!("{}", "done");
 }
 
 /*
