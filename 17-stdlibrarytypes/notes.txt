@@ -1,0 +1,9 @@
+
+The std library provides many custom types which expands drastically on the primitives. Some of these include:
+
+1) growable Strings like: "hello world"
+2) growable vectors: [1, 2, 3]
+3) optional types: Option<i32>
+4) error handling types: Result<i32, i32>
+5) heap allocated pointers: Box<i32>
+
