@@ -1,0 +1,9 @@
+
+Many other types are provided by the std library to support things such as:
+
+1) Threads
+2) Channels
+3) File I/O
+
+These expand beyond what the primitives provide.
+
